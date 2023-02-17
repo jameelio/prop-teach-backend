@@ -31,7 +31,7 @@ yarn install
 ``
 3. Compiles for development
 ``
-yarn start:dev
+yarn dev
 ``
 4. Compiles and outputs packaged code
 ``
