@@ -1,5 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose"
 
+export type OrganisationDocument = Organisation & Document;
+
 @Schema()
 export class Organisation {
     @Prop()

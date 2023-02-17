@@ -5,6 +5,7 @@
 - [Getting Started](#getting-started)
 - [EndPoints](#EndPoints)
 - [Contributing to the Project](#contributing-to-the-project)
+- [Deploy](#deploy)
 - [Other](#other)
 - [Meta](#meta)
 
@@ -46,6 +47,18 @@ A postman collection is added to this repo, for ease of use and testing purposes
 
 For detailed guidelines on how to create custom branches according to contribution follow
 Refer to `CONTRIBUTING.md`
+
+## Deploy
+
+This nestjs project is deployable as an aws lambda function
+
+
+Export the contents of the created `.env` file to the current terminal session.
+
+```bash
+set -o allexport; source .env; set +o allexport
+```
+
 ## Other
 
 See the installation guides available @ nodejs.org:

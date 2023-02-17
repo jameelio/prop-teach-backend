@@ -1,0 +1,40 @@
+service: prop-tech-api
+
+useDotenv: true
+
+package:
+  patterns:
+    - "!/node_modules/aws-sdk/**" # included on Lambda.
+
+provider:
+  name: aws
+  architecture: x86_64
+  runtime: nodejs14.x
+  region: ${env:AWS_REGION}
+  stage: ${env:STAGE}
+  timeout: 30
+  lambdaHashingVersion: "20201221"
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1"
+    STAGE: ${env:STAGE}
+    NODE_ENV: ${env:NODE_ENV}
+    MONGO_URI: ${env:MONGO_URI}
+  ecr:
+    images:
+      latest:
+        path: ./
+        platform: linux/amd64
+
+functions:
+  main:
+    image:
+      name: latest
+      command:
+        - dist/main.handler
+      entryPoint:
+        - "/lambda-entrypoint.sh"
+    events:
+      - http:
+          method: any
+          path: /{any+}
+          cors: true

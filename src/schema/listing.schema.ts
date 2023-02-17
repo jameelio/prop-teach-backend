@@ -9,7 +9,7 @@ export type ListingDocument = Listing & Document;
 @Schema()
 export class Listing {
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: Agent.name })
-    agent: Agent
+    agent: MongooseSchema.Types.ObjectId
 
     @Prop()
     title: string
@@ -21,7 +21,7 @@ export class Listing {
     status: string
 
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: Organisation.name })
-    organisation: Organisation;
+    organisation: MongooseSchema.Types.ObjectId;
 
     @Prop()
     listingType: string //enum

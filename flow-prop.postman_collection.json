@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "6d4d27e2-b725-4220-99ab-66da3d520bc5",
+		"name": "flow-prop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1500301"
+	},
+	"item": [
+		{
+			"name": "organisation",
+			"item": [
+				{
+					"name": "Create Organisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"_id\": \"5fd71dd63f9c98001131fd46\",\n  \"name\": \"RE/MAX-Property Associates (Table View)\",\n  \"logoUrl\": \"https://s3-eu-west-1.amazonaws.com/stream-images.remax.co.za/office/79/logo/propertyassociates.remax.co.za.png\",\n  \"address\": \"42 Blaauwberg Road, Table View, 7441\",\n  \"description\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/organisation",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"organisation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Organisations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/organisation",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"organisation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "agent",
+			"item": [
+				{
+					"name": "Create Agent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"_id\" : \"62d166dc8f0fae1c5b843f1b\",\n        \"firstName\" : \"Shameer\",\n        \"lastName\" : \"Isaacs\",\n        \"email\" : \"shameer@claremart.com\",\n        \"contactNumber\" : \"081 759 8302\",\n        \"profileImageUrl\" : \"\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/agent",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"agent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Agents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/agent",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"agent"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "listing",
+			"item": [
+				{
+					"name": "Create Listing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"_id\": \"63333d2ab98f270261529bdb\",\n  \"agent\": \"602386722cdb39001e18da08\",\n  \"title\": \"Lock up and go 2 bedroom townhouse in Faerie Glen\",\n  \"description\": \"Immediately available exceptional value at a monthly rental of R7000 per month. Two bedrooms, 1 bathroom, Lounge/dinning room leading out onto a balcony with a view. Kitchen with a breakfast nook. Provision for appliances. Covered car port.  Pre-paid electricity. Water included. Situated in an access-controlled security estate in walking distance from a shopping complex and restaurants. Complex swimming pool.\",\n  \"status\": \"listed\",\n  \"organisation\": \"61261f4cbf386a0011c59d56\",\n  \"listingType\": \"rent\",\n  \"listingSector\": \"residential\",\n  \"unit\": {\n    \"bedrooms\": 2.2,\n    \"bathrooms\": 1.5,\n    \"parking\": 0.0,\n    \"price\": 7000.45\n  },\n  \"images\": [\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-572c589d0e97d73?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/572c589d0e97d73.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-296ae5e7a19d7fa?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/296ae5e7a19d7fa.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-bbb643d4d9dd825?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/bbb643d4d9dd825.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-9fb6ae6cb34a77a?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/9fb6ae6cb34a77a.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-5e204482bc4338b?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/5e204482bc4338b.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-004e780ba269911?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/004e780ba269911.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-117e020e2f9fa6f?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/117e020e2f9fa6f.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-8a1f7ab70dc93af?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/8a1f7ab70dc93af.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-75bd5e58b7ded59?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/75bd5e58b7ded59.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-b5f209db0a93c63?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/b5f209db0a93c63.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-c6301f269c3254a?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/c6301f269c3254a.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-f3094a3f027995d?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/f3094a3f027995d.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-1d17275931ceb83?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/1d17275931ceb83.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-ede98887a08d6db?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/ede98887a08d6db.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-04fe8228f7bb77c?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/04fe8228f7bb77c.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-0886feee2d14507?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/0886feee2d14507.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-0b2ed32c52e5953?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/0b2ed32c52e5953.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-16e1c52304f580b?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/16e1c52304f580b.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-db0cc6b71bd8bd4?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/db0cc6b71bd8bd4.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-d2a36e8b83eedb3?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/d2a36e8b83eedb3.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-6efe2096c357d03?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/6efe2096c357d03.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-37ad2446471b761?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/37ad2446471b761.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-a814e604dd09035?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/a814e604dd09035.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-94cc8480581f8e6?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/94cc8480581f8e6.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-6ba88830488b256?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/6ba88830488b256.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-c28da47c1928036?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/c28da47c1928036.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-5e7f1b3e40f5fa0?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/5e7f1b3e40f5fa0.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-cfa403d01499b1c?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/cfa403d01499b1c.JPG\",\n    \"https://s3-staging.flowliving.com/propData/1920x1080/61261f4cbf386a0011c59d56-7ab61eaea8b8808?resource=https://d3bcax9k86ac90.cloudfront.net/uploads/listings/2022/01/7ab61eaea8b8808.JPG\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/listing",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"listing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Listings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/listing/all",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"listing",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Listing By OrgId Or AgentId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/listing?agentId=602386722cdb39001e18da08",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"listing"
+							],
+							"query": [
+								{
+									"key": "agentId",
+									"value": "608001de035ebc0011a71c4a",
+									"disabled": true
+								},
+								{
+									"key": "orgId",
+									"value": "61261f4cbf386a0011c59d56",
+									"disabled": true
+								},
+								{
+									"key": "agentId",
+									"value": "602386722cdb39001e18da08"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
