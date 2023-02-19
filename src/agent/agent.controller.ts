@@ -19,8 +19,8 @@ export class AgentController {
 
 
     @Get('/org')
-    async findAgentByOrgId(@Res() response, @Query('orgId') orgId: string) {
-        const results = await this.service.getAgentByOrgId(orgId)
+    async findAgentByOrgId(@Res() response, @Query('organisationID') organisationID: string) {
+        const results = await this.service.getAgentByOrgId(organisationID)
         return response.status(HttpStatus.OK).json(results)
     }
 }

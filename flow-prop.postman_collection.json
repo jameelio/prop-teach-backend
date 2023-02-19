@@ -89,12 +89,43 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostname}}/agent",
+							"raw": "{{hostname}}/agent/?organisationID=60ee916289cfca0011592430",
 							"host": [
 								"{{hostname}}"
 							],
 							"path": [
-								"agent"
+								"agent",
+								""
+							],
+							"query": [
+								{
+									"key": "organisationID",
+									"value": "60ee916289cfca0011592430"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Agent By OrgId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/agent/org?organisationID=61261f4cbf386a0011c59d56",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"agent",
+								"org"
+							],
+							"query": [
+								{
+									"key": "organisationID",
+									"value": "61261f4cbf386a0011c59d56"
+								}
 							]
 						}
 					},
@@ -137,13 +168,23 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostname}}/listing/all",
+							"raw": "{{hostname}}/listing/all?area=belhar&listingType=sale",
 							"host": [
 								"{{hostname}}"
 							],
 							"path": [
 								"listing",
 								"all"
+							],
+							"query": [
+								{
+									"key": "area",
+									"value": "belhar"
+								},
+								{
+									"key": "listingType",
+									"value": "sale"
+								}
 							]
 						}
 					},
@@ -179,6 +220,14 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Listing Advance Search",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
