@@ -5,6 +5,13 @@ import { Model } from 'mongoose';
 import { Listing, ListingDocument } from '../schema/listing.schema';
 import { Agent, AgentDocument } from '../schema/agent.schema';
 
+type Config = {
+    listingType: string[],
+    listingSector: string[],
+    organisation: string[],
+
+
+}
 @Injectable()
 export class ListingService {
     constructor(
@@ -38,4 +45,15 @@ export class ListingService {
             .populate('agent')
             .exec()
     }
+
+    async advanceSearch({ area, listingType, options }): Promise<Listing[]> {
+        const results = await this.listingModel.aggregate([
+            { $match: { listingType: listingType } }
+        ])
+        return results
+    }
+
+    // async getConfig(): Promise<Config> {
+
+    // }
 }

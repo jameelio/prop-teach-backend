@@ -12,6 +12,16 @@ export class ListingController {
         return properties
     }
 
+    @Get('/advanceSearch')
+    async advanceSearch(
+        @Query('area') area: string,
+        @Query('listingType') listingType: string,
+        @Query('options') options: []
+    ) {
+        console.log('optional types', { area, listingType, options })
+
+        return await this.service.advanceSearch({ area, listingType, options })
+    }
 
     @Get()
     async findListingByAgentId(@Res() response,
